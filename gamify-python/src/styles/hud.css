@@ -1,0 +1,11 @@
+html,body,#app-canvas{margin:0;width:100%;height:100%;background:#000;display:block}
+
+#code-panel{
+  position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:600px;height:420px;border:2px solid #00d8ff;background:#111;
+  display:none;z-index:10;padding:4px;box-sizing:border-box
+}
+#code-panel.show{display:block;}
+
+#timer{color:#0ff;font-family:monospace;margin-bottom:4px}
+#run-btn{padding:4px 12px;margin-bottom:6px}
