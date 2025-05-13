@@ -2,10 +2,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]         # deploy every push to main
-    paths-ignore:
-      - "README.md"
-  workflow_dispatch:         # manual trigger
+    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -26,7 +24,6 @@ jobs:
       - run: npm ci
       - run: npm run build
 
-      # upload static site to the Pages artifact
       - uses: actions/upload-pages-artifact@v2
         with:
           path: dist
